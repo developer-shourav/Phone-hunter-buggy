@@ -29,10 +29,10 @@ const displayPhones = (phones, dataLimit) =>{
         noPhone.classList.add('d-none');
     }
     // display all phones
+    console.log(phones);
     phones.forEach(phone =>{
         const phoneDiv  = document.createElement('div');
         phoneDiv.classList.add('col');
-        console.log(phone);
         phoneDiv.innerHTML = `
         <div class="card p-4">
             <img src="${phone.image}" class="card-img-top" alt="...">
@@ -65,7 +65,7 @@ document.getElementById('btn-search').addEventListener('click', function(){
 
 // search input field enter key handler
 document.getElementById('search-field').addEventListener('keypress', function (e) {
-    if (e.key === 'enter') {
+    if (e.key === 'Enter') {
         processSearch(10);
     }
 });
